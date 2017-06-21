@@ -1,0 +1,9 @@
+C:\asd\reviews\ReviewService\Reviews.Api\bin\Debug\netcoreapp1.1\Reviews.Api.deps.json
+C:\asd\reviews\ReviewService\Reviews.Api\bin\Debug\netcoreapp1.1\Reviews.Api.runtimeconfig.json
+C:\asd\reviews\ReviewService\Reviews.Api\bin\Debug\netcoreapp1.1\Reviews.Api.runtimeconfig.dev.json
+C:\asd\reviews\ReviewService\Reviews.Api\bin\Debug\netcoreapp1.1\Reviews.Api.dll
+C:\asd\reviews\ReviewService\Reviews.Api\bin\Debug\netcoreapp1.1\Reviews.Api.pdb
+C:\asd\reviews\ReviewService\Reviews.Api\obj\Debug\netcoreapp1.1\Reviews.Api.csprojResolveAssemblyReference.cache
+C:\asd\reviews\ReviewService\Reviews.Api\obj\Debug\netcoreapp1.1\Reviews.Api.AssemblyInfo.cs
+C:\asd\reviews\ReviewService\Reviews.Api\obj\Debug\netcoreapp1.1\Reviews.Api.dll
+C:\asd\reviews\ReviewService\Reviews.Api\obj\Debug\netcoreapp1.1\Reviews.Api.pdb
