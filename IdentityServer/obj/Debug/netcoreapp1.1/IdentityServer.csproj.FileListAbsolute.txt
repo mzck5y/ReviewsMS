@@ -1,0 +1,9 @@
+C:\asd\reviews\ReviewService\IdentityServer\bin\Debug\netcoreapp1.1\IdentityServer.deps.json
+C:\asd\reviews\ReviewService\IdentityServer\bin\Debug\netcoreapp1.1\IdentityServer.runtimeconfig.json
+C:\asd\reviews\ReviewService\IdentityServer\bin\Debug\netcoreapp1.1\IdentityServer.runtimeconfig.dev.json
+C:\asd\reviews\ReviewService\IdentityServer\bin\Debug\netcoreapp1.1\IdentityServer.dll
+C:\asd\reviews\ReviewService\IdentityServer\bin\Debug\netcoreapp1.1\IdentityServer.pdb
+C:\asd\reviews\ReviewService\IdentityServer\obj\Debug\netcoreapp1.1\IdentityServer.csprojResolveAssemblyReference.cache
+C:\asd\reviews\ReviewService\IdentityServer\obj\Debug\netcoreapp1.1\IdentityServer.AssemblyInfo.cs
+C:\asd\reviews\ReviewService\IdentityServer\obj\Debug\netcoreapp1.1\IdentityServer.dll
+C:\asd\reviews\ReviewService\IdentityServer\obj\Debug\netcoreapp1.1\IdentityServer.pdb

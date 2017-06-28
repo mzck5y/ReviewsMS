@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Reviews.Api.Data.DataContexts;
+using Reviews.Api.Data.Stores;
 
 namespace Reviews.Api
 {
@@ -27,9 +28,11 @@ namespace Reviews.Api
             // Add framework services.
             services.AddMvc();
 
-            ReviewsDataContext dataCtx = new ReviewsDataContext(Configuration.GetConnectionString("ReviewsConnectionString"));
+            ReviewsDataContext dataCtx = new ReviewsDataContext(Configuration.GetConnectionString("ReviewsDataStore"));
             services.AddSingleton(dataCtx);
-            //services.AddSingleton<IReviewsStore, ReviewsStoreMongo>();
+            //ReviewsStoreMongo store = new ReviewsStoreMongo(dataCtx);
+            //services.AddSingleton(store);
+            services.AddSingleton<IReviewsStore, ReviewsStoreMongo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
