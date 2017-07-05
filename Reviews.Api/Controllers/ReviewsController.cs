@@ -7,10 +7,12 @@ using Reviews.Api.Data.Stores;
 using Reviews.Api.Data.Entities;
 using Reviews.Api.Models.Requests;
 using System.Collections;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Reviews.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class ReviewsController : Controller
     {
         private readonly ReviewsStoreMongo _store;
@@ -21,6 +23,7 @@ namespace Reviews.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ClientPolicy")]
         public IActionResult CreateReview( [FromBody] CreateReviewRequest request)
         {
             if (ModelState.IsValid == false)

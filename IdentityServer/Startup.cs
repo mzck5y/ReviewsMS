@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using IdentityServer.IdentityServices;
+using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 namespace IdentityServer
 {
@@ -21,9 +23,13 @@ namespace IdentityServer
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            _env = env;
         }
 
         public IConfigurationRoot Configuration { get; }
+        private IHostingEnvironment _env;
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -31,11 +37,14 @@ namespace IdentityServer
             // Add framework services.
             services.AddMvc();
 
+            string certPath = Path.Combine(_env.ContentRootPath, "identity_token_server.pfx");
+            X509Certificate2 cert = new X509Certificate2(certPath, "w@s@m@ndr@kk@");
+
             services.AddIdentityServer()
                 .AddInMemoryApiResources(ConfigServer.GetApiResources())
                 .AddTestUsers(ConfigServer.GetUSers())
                 .AddInMemoryClients(ConfigServer.GetClients())
-                .AddTemporarySigningCredential();
+                .AddSigningCredential(cert);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
